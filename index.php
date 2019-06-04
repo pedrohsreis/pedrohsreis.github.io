@@ -9,11 +9,25 @@
     <h3>Listar commits</h3>
     <form method = "get">
         <input type = "text" hidden name = "user" value = ""/>
+        <input hidden value = "" name = "contents" />
         <input type = "text" placeholder = "Usuário" name = "userRepo"/>
         <input type = "text" placeholder = "Repositório" name = "repo" />
         <input type = "submit" action = "http://localhost/apigit" />
     </form>
 
+
+    <?php if($_GET['userRepo'] && $_GET['repo']) { ?>
+
+        <h2>Fazer download de conteúdo</h2>
+        <form method = "get">
+            <input hidden value = "1" name = "contents" />
+            <input type = "text" hidden name = "user" value = ""/>
+            <input hidden value = <?php echo $_GET['userRepo']; ?> name = "userRepo" />
+            <input hidden value = <?php echo $_GET['repo'] ?> name = "repo" />
+            <input type = "submit" value = "Buscar conteúdo" action = "http://localhost/apigit" />
+        </form>
+
+    <?php } ?>
 
 <?php
 
@@ -22,6 +36,7 @@
     $user = null;
     $userRepo = null;
     $repo = null;
+    $content = null;
 
     if($_GET['user'])
         $user = $_GET['user'];
@@ -29,8 +44,10 @@
         $userRepo = $_GET['userRepo'];
     if($_GET['repo'])
         $repo = $_GET['repo'];
+    if($_GET['contents'])
+        $content = 1;
 
-    if($repo && $userRepo){
+    if($repo && $userRepo && !$content){
         curl_setopt($ch, CURLOPT_USERAGENT, "Pedro Reis");
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -41,16 +58,39 @@
         $json = json_decode($resp, true);
         curl_close($ch);
 
+
         if($json){
             foreach($json as $value){
                 echo "Hash do commit: " . $value['sha'] . "<br>";
-                echo "Autor: " . $value['author'] . "<br>";
+                echo "Mensagem: " . $value['commit']['message'] . "<br>";
+                echo "Autor do commit: " . $value['commit']['author']['name'] . "<br>";
+                echo "Email do committer: " . $value['commit']['author']['email'] . "<br>";
+                echo "Data do commit: " . $value['commit']['author']['date'] . "<br>";
+                echo "<br>";
             }
             
         }
     }
 
+    if($repo && $userRepo && $content){
+        curl_setopt($ch, CURLOPT_USERAGENT, "Pedro Reis");
 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        curl_setopt($ch, CURLOPT_URL, "https://api.github.com/repos/".$userRepo."/".$repo."/contents");
+
+        $resp = curl_exec($ch);
+        $json = json_decode($resp, true);
+        curl_close($ch);
+
+
+        if($json){
+            foreach($json as $value){
+                echo "URL de download: " . $value['download_url'] . "<br>";
+            }
+            
+        }
+    }
 
 
     if($_GET['user']){

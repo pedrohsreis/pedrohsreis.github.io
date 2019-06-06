@@ -78,9 +78,13 @@
                 $i++;
             }
             $jsonCommits = json_encode($vetorCommits);
-
+            
             echo $jsonCommits;
             
+            $fp = fopen('results.json', 'w');
+            fwrite($fp, $jsonCommits);
+            fclose($fp);
+
         }
     }
 

@@ -1,0 +1,152 @@
+[  
+    {  
+       "autor":"Edward Loper",
+       "data":"2019-06-06T13:34:33Z",
+       "mensagem":"Do not override the tf.gather docs with gen_array_ops.gather_v2.__doc__.\n\nPiperOrigin-RevId: 251840620"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T12:59:43Z",
+       "mensagem":"Apply 'buildozer fix moveLicensesAndDistribs movePackageToTop' to all BUILD files.\n\nPiperOrigin-RevId: 251836013"
+    },
+    {  
+       "autor":"TensorFlower Gardener",
+       "data":"2019-06-06T12:59:19Z",
+       "mensagem":"Merge pull request #29193 from chosungmann:fix-typos\n\nPiperOrigin-RevId: 251835242"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T11:46:59Z",
+       "mensagem":"Put the dynamic libraries into the platlib (platform specific) instead of the\npurelib (default).\n\nThis allows auditwheel to audit the wheel without errors.\n\nPiperOrigin-RevId: 251828232"
+    },
+    {  
+       "autor":"Tiezhen WANG",
+       "data":"2019-06-06T10:47:24Z",
+       "mensagem":"Initialize context using memset\n\nPiperOrigin-RevId: 251821825"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T10:41:22Z",
+       "mensagem":"[TF:XLA] Handle predicates for matrix diagonal operations.\n\nPiperOrigin-RevId: 251821349"
+    },
+    {  
+       "autor":"Sergei Lebedev",
+       "data":"2019-06-06T10:04:40Z",
+       "mensagem":"Migrated LSTMBlock* and GRUCell* ops from contrib\/rnn to core\n\nNote that this change only touches on the C++ side of things, i.e.\nthere is no public API for using the migrated ops other than via\ntf.raw_ops.\n\nPiperOrigin-RevId: 251817746"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T09:17:31Z",
+       "mensagem":"Small LLVM build file change (table_gen -> tablegen) to make it more similar to the internal one.\n\nPiperOrigin-RevId: 251811794"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T09:09:32Z",
+       "mensagem":"[TF:XLA] Handle bitcasts between different bitwidths\n\nPiperOrigin-RevId: 251810931"
+    },
+    {  
+       "autor":"TensorFlower Gardener",
+       "data":"2019-06-06T09:13:29Z",
+       "mensagem":"Merge pull request #29366 from georgepaw:custom_call_side_effects\n\nPiperOrigin-RevId: 251810677"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T08:22:32Z",
+       "mensagem":"[TF:XLA] Broadcast Labels or Logits for SoftmaxCrossEntropyWithLogits.\n\nPiperOrigin-RevId: 251805348"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T07:53:20Z",
+       "mensagem":"Add Pfor converter for SelectV2.\n\nPiperOrigin-RevId: 251801227"
+    },
+    {  
+       "autor":"TensorFlower Gardener",
+       "data":"2019-06-06T06:25:28Z",
+       "mensagem":"Merge pull request #29045 from Intel-tensorflow:guizili\/relu6_elu\n\nPiperOrigin-RevId: 251791377"
+    },
+    {  
+       "autor":"TensorFlower Gardener",
+       "data":"2019-06-06T05:37:57Z",
+       "mensagem":"Merge pull request #29326 from imransalam:patch-5\n\nPiperOrigin-RevId: 251786723"
+    },
+    {  
+       "autor":"Renjie Liu",
+       "data":"2019-06-06T02:54:52Z",
+       "mensagem":"Give out warning if model has place holder but not in the input_array specified by the user.\n\nPiperOrigin-RevId: 251771255"
+    },
+    {  
+       "autor":"Mihai Maruseac",
+       "data":"2019-06-06T01:55:48Z",
+       "mensagem":"Internal change\n\nPiperOrigin-RevId: 251765499"
+    },
+    {  
+       "autor":"Jared Duke",
+       "data":"2019-06-06T00:11:18Z",
+       "mensagem":"Internal change\n\nPiperOrigin-RevId: 251750813"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-06T00:05:50Z",
+       "mensagem":"Expose step container name in TraceMes for ops.\n\nPiperOrigin-RevId: 251749879"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-05T23:37:33Z",
+       "mensagem":"Bring up first working camera demo for micro vision project\n\nPiperOrigin-RevId: 251744641"
+    },
+    {  
+       "autor":"George Karpenkov",
+       "data":"2019-06-05T23:29:45Z",
+       "mensagem":"Do not attempt to start a subprocess on Windows for ptxas invocation.\n\nExisting users should be able to rely on driver for the compilation.\n\nPiperOrigin-RevId: 251743103"
+    },
+    {  
+       "autor":"Sanjoy Das",
+       "data":"2019-06-05T23:18:34Z",
+       "mensagem":"[TF:XLA] Bump open source abseil revision to 61c9bf3e3e1c28a4aa6d7f1be4b37fd473bb5529\n\nPiperOrigin-RevId: 251741194"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-05T22:29:34Z",
+       "mensagem":"n\/a\n\nPiperOrigin-RevId: 251731764"
+    },
+    {  
+       "autor":"Yanan Cao",
+       "data":"2019-06-05T22:06:48Z",
+       "mensagem":"Internal change\n\nPiperOrigin-RevId: 251727442"
+    },
+    {  
+       "autor":"Yanan Cao",
+       "data":"2019-06-05T21:52:09Z",
+       "mensagem":"Add support for XlaCompileOnDemandOp to analyze constant requirement of functional if\/while.\n\nPiperOrigin-RevId: 251724366"
+    },
+    {  
+       "autor":"Katherine Wu",
+       "data":"2019-06-05T21:46:05Z",
+       "mensagem":"Set SavedModel as default format for model.save in TF2, and compile loaded model.\n\nAdditional change:\n- Sequential models are now revived as Sequential.\n\nPiperOrigin-RevId: 251723025"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-05T21:45:28Z",
+       "mensagem":"Near comparison now works for non-fp types. Callback uses ShapeIndex parameter.\n\nliteral_comparison::Near will now make a call to miscompare_callback when non\nfloating\/complex types fail the check.\n\nliteral_comparison::Near may now accept nullptr as a miscompare_callback. In\nthis case, it will return on the first failed comparison.\n\nMiscompareCallback functions now have the ShapeIndex of the LiteralSlice being\ncompared as a parameter.\n\nPiperOrigin-RevId: 251722837"
+    },
+    {  
+       "autor":"Karim Nosir",
+       "data":"2019-06-05T21:18:16Z",
+       "mensagem":"Parameterize the mlir_coverage_test and add mobilenet_v2 to test.\nNew models will should add new parameterized values to run.\n\nPiperOrigin-RevId: 251716874"
+    },
+    {  
+       "autor":"Haoliang Zhang",
+       "data":"2019-06-05T21:13:24Z",
+       "mensagem":"Support ANEURALNETWORKS_TENSOR_BOOL8 in NNAPI delegate.\nTweak the error message when handling an unsupported tensor type.\n\nPiperOrigin-RevId: 251715923"
+    },
+    {  
+       "autor":"Yanan Cao",
+       "data":"2019-06-05T21:10:19Z",
+       "mensagem":"Internal change\n\nPiperOrigin-RevId: 251715294"
+    },
+    {  
+       "autor":"A. Unique TensorFlower",
+       "data":"2019-06-05T21:02:34Z",
+       "mensagem":"Special case 1D resizes and no-op resizes.\n\nBilinear resize from [X, Y] -> [X, Y] is a no-op, but previously, ResizeBilinear would generated a 1x1 convolution.\n\nBilinear resize from [X, A] -> [X, B] or [A, Y] -> [B, Y] are one dimensional, but previously the code used the two dimensional general case if the kernel size was sufficiently small.\n\nPiperOrigin-RevId: 251713592"
+    }
+ ]

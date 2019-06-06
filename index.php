@@ -38,6 +38,9 @@
     $repo = null;
     $content = null;
 
+    $vetorCommits;
+    $i = 0;
+
     if($_GET['user'])
         $user = $_GET['user'];
     if($_GET['userRepo'])
@@ -67,7 +70,16 @@
                 echo "Email do committer: " . $value['commit']['author']['email'] . "<br>";
                 echo "Data do commit: " . $value['commit']['author']['date'] . "<br>";
                 echo "<br>";
+
+                $vetorCommits[$i]['autor'] = $value['commit']['author']['name'];
+                //echo "Autor no vetor: " .$vetorCommits[$i]['autor'];
+                $vetorCommits[$i]['data'] = $value['commit']['author']['date'];
+                $vetorCommits[$i]['mensagem'] = $value['commit']['message'];
+                $i++;
             }
+            $jsonCommits = json_encode($vetorCommits);
+
+            echo $jsonCommits;
             
         }
     }
